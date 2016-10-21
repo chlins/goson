@@ -19,6 +19,10 @@ type Goson struct {
 	nil for JSON null
 */
 
+func New(i interface{}) *Goson {
+	return &Goson{i: i}
+}
+
 // Parse will create a goson object from json data
 func Parse(data []byte) (*Goson, error) {
 	var i interface{}
